@@ -17,3 +17,8 @@ Then('user should see {int} book categories', async function (int) {
     const totalOptions = await PageManager.booksPage.BookCategoriesDropdown.locator("option").count();
     expect(totalOptions).toBe(int);
 });
+
+Then('book category name {string} should be included in the categories', async function (string) {
+ const options = await PageManager.booksPage.BookCategoriesDropdown.locator("option").allInnerTexts();
+ expect(options).toContain(string);
+});
