@@ -13,6 +13,7 @@ export class DashboardPage extends BasePage {
     this.logoutButton = page.locator("//a[@class='dropdown-item']");
     //this.logoutButton = page.getByText("Log Out");
     this.bookLink = page.locator("//a[@class='nav-link' and @href='#books']");
+    this.borrowingBookLink = page.locator("//a[@class='nav-link' and @href='#borrowing-books']");
     
   }
 
